@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flip-the-coin</title>
+  <link href="coin.css" rel="stylesheet">
+</head>
+<body>
+  <script>
+    const score = {
+    Heads: 0,
+    Tails: 0
+  }
+  </script>
+  <div>
+  <button 
+  onclick ="
+  score.Heads = 0;
+  score.Tails = 0;
+
+  alert(`The Result is : Heads: ${score.Heads} Tails: ${score.Tails}`)
+  ">
+    Reset
+  </button>
+  </div>
+<div>
+  <button 
+   background-color: rgb(200, 142, 55);
+  color: black;
+  padding: 40px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  onclick="
+
+  let Result = '';
+
+  computerMove = Math.random();
+  if (computerMove >= 0 && computerMove <  1 / 2){
+    Result = 'Heads';
+  } else if(computerMove >= 1 / 2 && computerMove < 1){
+    Result = 'Tails';
+  }
+
+  if (Result === 'Heads'){
+    score.Heads += 1;
+  } else if (Result === 'Tails'){
+    score.Tails += 1;
+  }
+
+  alert(`The Result is : Heads: ${score.Heads} Tails: ${score.Tails}`)
+  ">
+    Flip the coin
+  </button>
+</div>
+</body>
+</html>
